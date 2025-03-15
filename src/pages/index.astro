@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 const title = "Nekashii";
 const description = "Sitio web personal de Rebecca Alitzel";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -31,21 +33,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-
-    <style>
-      body {
-        min-height: 100vh;
-        width: 100vw;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-    </style>
   </head>
-  <body>
-    <h1>Rebecca Alitzel</h1>
-    <p>@Nekashii</p>
+  <body
+    class="min-h-dvh w-dvw flex flex-col items-center justify-center bg-white text-black dark:bg-black dark:text-white"
+  >
+    <h1 class="font-medium">Rebecca Alitzel</h1>
+    <p class="opacity-75">@Nekashii</p>
   </body>
 </html>
